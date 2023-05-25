@@ -1,0 +1,23 @@
+<div>
+  <div [hidden]="submitted">
+    <h1>User Data Form</h1>
+    <form (ngSubmit)="onSubmit()" #userDataForm="ngForm">
+      <div>
+        <label for="userdata">User data</label>
+        <input type="text" id="userdata" [(ngModel)]="model.userdata" name="userdata">
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <div [hidden]="!submitted">
+    <h2>You submitted the following:</h2>
+    <div>
+      <div>User Data</div>
+      <div>{{model.userdata}}</div>
+    </div>
+    <br>
+    <button (click)="submitted=false">Edit</button>
+  </div>
+</div>

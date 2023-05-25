@@ -2,10 +2,20 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.2.
 
+NodeJs v16.14.2
+## Setting up FusionAuth
+
+`curl -o docker-compose.yml https://raw.githubusercontent.com/FusionAuth/fusionauth-containers/master/docker/fusionauth/docker-compose.yml`
+
+`curl -o .env https://raw.githubusercontent.com/FusionAuth/fusionauth-containers/master/docker/fusionauth/.env`
+
+`docker-compose up`
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
+Run `npm run server` for express server to provide the data from our OAuth2 server
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
